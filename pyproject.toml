@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "temporal-memory-decay"
+version = "0.1.0"
+description = "Cognitive memory store implementing Ebbinghaus forgetting curves and importance reinforcement"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+temporal-memory-decay = "temporal_memory_decay.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["temporal_memory_decay*"]
